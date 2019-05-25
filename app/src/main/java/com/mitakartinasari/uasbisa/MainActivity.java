@@ -1,6 +1,7 @@
 package com.mitakartinasari.uasbisa;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -81,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+    }
+
+    @OnClick(R.id.buttonLihat) void lihat() {
+        startActivity(new Intent(MainActivity.this, ViewActivity.class));
     }
 }
 
